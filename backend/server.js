@@ -491,7 +491,19 @@ app.put('/api/settings', (req, res) => {
   res.json({ success: true, settings: db.settings, message: 'Settings updated successfully' });
 });
 
+// Serve static frontend build in production mode if dist exists
+const distPath = path.join(__dirname, '../frontend/dist');
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(path.join(distPath, 'index.html'));
+    }
+  });
+}
+
 app.listen(PORT, () => {
   console.log(`[SmartQueue AI Backend] Server listening on port ${PORT}`);
   console.log(`[SmartQueue AI Backend] Health check: http://localhost:${PORT}/api/health`);
 });
+
