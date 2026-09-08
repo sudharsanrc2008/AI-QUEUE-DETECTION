@@ -59,14 +59,25 @@ SmartQueue AI is a full-stack web application designed for real-world enterprise
 - npm (v9 or higher)
 - *(Optional for hardware YOLO)*: Python 3.9+ (`pip install ultralytics opencv-python requests numpy`)
 
-### 1. Launch All Services (Single Command)
-From the project root:
-```bash
-node run-dev.js
-```
-This automatically starts:
-- **Express Backend API**: `http://localhost:5000`
-- **Vite React Frontend**: `http://localhost:3000`
+### 1. Launch All Services (One-Click Options)
+- **Option A (Double-Click Batch File)**: Double-click `start.bat` in the project root.
+- **Option B (Node Runner)**:
+  ```bash
+  node run-dev.js
+  ```
+- **Option C (Unified Production Server)**:
+  ```bash
+  cd backend && node server.js
+  # Serves both REST APIs and the frontend build on http://localhost:5000
+  ```
+
+### 2. Push to GitHub (One-Click)
+- Double-click `push-github.bat` or run:
+  ```cmd
+  push-github.bat
+  ```
+  *(Enter your GitHub Personal Access Token if prompted for password)*
+
 
 ### 2. Or Run Separately
 
