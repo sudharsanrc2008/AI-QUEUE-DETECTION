@@ -1,0 +1,234 @@
+{
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Dr. Sarah Jenkins",
+      "email": "admin@smartqueue.ai",
+      "password": "password123",
+      "role": "admin",
+      "department": "Operations Intelligence"
+    },
+    {
+      "id": "usr-2",
+      "name": "Alex Rivera",
+      "email": "operator@smartqueue.ai",
+      "password": "password123",
+      "role": "operator",
+      "department": "Terminal Monitoring"
+    },
+    {
+      "id": "usr-3",
+      "name": "Prof. Davis (Immersion Evaluator)",
+      "email": "viewer@smartqueue.ai",
+      "password": "password123",
+      "role": "viewer",
+      "department": "AI Faculty Review"
+    }
+  ],
+  "queues": [
+    {
+      "id": "q-canteen",
+      "name": "Queue A - College Canteen",
+      "location": "Student Hub Food Court",
+      "capacity": 35,
+      "current_people": 14,
+      "avg_service_time_sec": 45,
+      "counters_open": 2,
+      "status": "Normal",
+      "camera_id": "CAM-01-HD",
+      "confidence": 96.8,
+      "zone_coords": [
+        [
+          40,
+          60
+        ],
+        [
+          280,
+          60
+        ],
+        [
+          280,
+          380
+        ],
+        [
+          40,
+          380
+        ]
+      ]
+    },
+    {
+      "id": "q-hospital",
+      "name": "Queue B - Hospital Reception",
+      "location": "Emergency & Triage Wing",
+      "capacity": 30,
+      "current_people": 26,
+      "avg_service_time_sec": 75,
+      "counters_open": 3,
+      "status": "Busy",
+      "camera_id": "CAM-02-4K",
+      "confidence": 94.2,
+      "zone_coords": [
+        [
+          50,
+          40
+        ],
+        [
+          320,
+          40
+        ],
+        [
+          320,
+          390
+        ],
+        [
+          50,
+          390
+        ]
+      ]
+    },
+    {
+      "id": "q-railway",
+      "name": "Queue C - Railway Ticket Counter",
+      "location": "Central Junction Booking Hall",
+      "capacity": 40,
+      "current_people": 39,
+      "avg_service_time_sec": 90,
+      "counters_open": 2,
+      "status": "Overcrowded",
+      "camera_id": "CAM-03-PTZ",
+      "confidence": 92.5,
+      "zone_coords": [
+        [
+          30,
+          80
+        ],
+        [
+          300,
+          80
+        ],
+        [
+          300,
+          420
+        ],
+        [
+          30,
+          420
+        ]
+      ]
+    },
+    {
+      "id": "q-bank",
+      "name": "Queue D - Bank Cash Desk",
+      "location": "Downtown Branch Counter 1-4",
+      "capacity": 25,
+      "current_people": 9,
+      "avg_service_time_sec": 60,
+      "counters_open": 3,
+      "status": "Normal",
+      "camera_id": "CAM-04-AI",
+      "confidence": 98.1,
+      "zone_coords": [
+        [
+          60,
+          50
+        ],
+        [
+          260,
+          50
+        ],
+        [
+          260,
+          350
+        ],
+        [
+          60,
+          350
+        ]
+      ]
+    },
+    {
+      "id": "q-gov",
+      "name": "Queue E - Government Revenue Office",
+      "location": "Civic Center Citizen Services",
+      "capacity": 45,
+      "current_people": 31,
+      "avg_service_time_sec": 110,
+      "counters_open": 2,
+      "status": "Busy",
+      "camera_id": "CAM-05-AI",
+      "confidence": 95,
+      "zone_coords": [
+        [
+          45,
+          70
+        ],
+        [
+          290,
+          70
+        ],
+        [
+          290,
+          400
+        ],
+        [
+          45,
+          400
+        ]
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alt-1",
+      "queue_id": "q-railway",
+      "queue_name": "Queue C - Railway Ticket Counter",
+      "alert_type": "Overcrowding Hazard",
+      "message": "Queue C has reached 39 people (97.5% of max capacity 40). Immediate line dispatch required.",
+      "severity": "critical",
+      "status": "active",
+      "timestamp": "2026-09-08T13:11:07.539Z"
+    },
+    {
+      "id": "alt-2",
+      "queue_id": "q-hospital",
+      "queue_name": "Queue B - Hospital Reception",
+      "alert_type": "High Waiting Time Threshold",
+      "message": "Average waiting time in Hospital Triage surpassed 18 minutes. Consider opening Counter 4.",
+      "severity": "warning",
+      "status": "active",
+      "timestamp": "2026-09-08T13:00:07.541Z"
+    },
+    {
+      "id": "alt-3",
+      "queue_id": "q-gov",
+      "queue_name": "Queue E - Government Revenue Office",
+      "alert_type": "Service Rate Slowdown",
+      "message": "Processing delay detected: average service time increased by 35% over baseline.",
+      "severity": "warning",
+      "status": "active",
+      "timestamp": "2026-09-08T12:33:07.541Z"
+    },
+    {
+      "id": "alt-4",
+      "queue_id": "q-canteen",
+      "queue_name": "Queue A - College Canteen",
+      "alert_type": "Camera Occlusion Resolved",
+      "message": "CAM-01-HD visual occlusion cleared. Detection confidence restored to 96.8%.",
+      "severity": "info",
+      "status": "resolved",
+      "timestamp": "2026-09-08T11:25:07.541Z"
+    }
+  ],
+  "settings": {
+    "queue_limit": 30,
+    "waiting_time_limit": 20,
+    "confidence_threshold": 75,
+    "camera_fps": 30,
+    "detection_mode": "simulation",
+    "audio_alerts": true,
+    "auto_refresh": true,
+    "theme": "dark",
+    "ai_tracker": "ByteTrack",
+    "enable_rois": true
+  }
+}

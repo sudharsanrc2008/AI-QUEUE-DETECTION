@@ -1,0 +1,14 @@
+{
+  "name": "smartqueue-ai",
+  "version": "1.0.0",
+  "description": "SmartQueue AI - Real-Time AI Queue Detection & Management Platform",
+  "scripts": {
+    "dev": "node run-dev.js",
+    "server": "node backend/server.js",
+    "client": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build"
+  },
+  "keywords": ["computer-vision", "yolo", "queue-detection", "smart-city", "opencv", "react"],
+  "author": "SmartQueue AI Team",
+  "license": "MIT"
+}
